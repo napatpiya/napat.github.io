@@ -296,13 +296,17 @@ h1, h2, h3, h4, h5, h6 {
 --------------------------------------------------------------*/
 #hero {
   width: 100%;
+  /* height: 100%; */
   height: 100vh;
-  background: url("../img/cover.jpg") top right;
-  background-size: cover;
+  background: black;
+  /* background-image: url('../img/diagram.jpg');
+  background-size: cover; */
+  /* background: url("../img/cover.jpg") top right; */
+  /* background-size: cover; */
   position: relative;
 }
 
-#hero:before {
+/* #hero:before {
   content: "";
   background: rgba(0, 0, 0, 0.65);
   position: absolute;
@@ -310,7 +314,7 @@ h1, h2, h3, h4, h5, h6 {
   top: 0;
   left: 0;
   right: 0;
-}
+} */
 
 #hero .hero-container {
   position: absolute;
@@ -325,6 +329,13 @@ h1, h2, h3, h4, h5, h6 {
   padding: 0 15px;
 }
 
+#hero .hero-container img {
+  /* margin-top: 100px; */
+  max-width: 100%;
+  height: 100vh;
+  /* height: auto; */
+}
+
 #hero h1 {
   margin: 0 0 10px 0;
   font-size: 64px;
@@ -334,6 +345,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #hero h2 {
+  position: absolute;
   color: #eee;
   margin-bottom: 50px;
   font-size: 13px;
@@ -343,6 +355,9 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #hero .btn-scroll {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
   transition: 0.4s;
   color: rgba(255, 255, 255, 0.6);
   animation: up-down 1s ease-in-out infinite alternate-reverse both;
@@ -675,6 +690,11 @@ section {
   margin-bottom: 10px;
 }
 
+.resume .resume-item a {
+  color: #111;
+  transition: 0.3s;
+}
+
 .resume .resume-item ul {
   padding-left: 20px;
 }
@@ -697,6 +717,10 @@ section {
   top: 0;
   background: #fff;
   border: 2px solid #82909c;
+}
+
+.resume .resume-item a:hover {
+  color: #ffb727;
 }
 
 /*--------------------------------------------------------------
@@ -729,10 +753,10 @@ section {
   padding-top: 17px;
   display: inline-block;
   text-align: center;
-  border-radius: 50%;
-  width: 72px;
-  height: 72px;
-  background: url("../img/django.png") center center no-repeat;
+  /* border-radius: 50%; */
+  width: 100px;
+  height: 80px;
+  background: url("../img/pythondjango.png") center center no-repeat;
   background-size: cover;
 }
 
@@ -742,9 +766,9 @@ section {
   display: inline-block;
   text-align: center;
   border-radius: 50%;
-  width: 72px;
-  height: 72px;
-  background: url("../img/react.png") center center no-repeat;
+  width: 80px;
+  height: 80px;
+  background: url("../img/reactnative.jpg") center center no-repeat;
   background-size: cover;
 }
 
@@ -754,8 +778,8 @@ section {
   display: inline-block;
   text-align: center;
   border-radius: 50%;
-  width: 72px;
-  height: 72px;
+  width: 80px;
+  height: 80px;
   background: url("../img/csharp.png") center center no-repeat;
   background-size: cover;
 }
@@ -766,8 +790,8 @@ section {
   display: inline-block;
   text-align: center;
   border-radius: 50%;
-  width: 72px;
-  height: 72px;
+  width: 80px;
+  height: 80px;
   background: url("../img/js.png") center center no-repeat;
   background-size: cover;
 }
@@ -779,6 +803,13 @@ section {
 }
 
 .services .title {
+  font-weight: 700;
+  margin-bottom: 15px;
+  font-size: 26px;
+}
+
+.services .title-ip {
+  font-family: sans-serif;
   font-weight: 700;
   margin-bottom: 15px;
   font-size: 18px;
@@ -808,18 +839,18 @@ section {
 }
 
 /*--------------------------------------------------------------
-# Testimonials
+# Say Thank you
 --------------------------------------------------------------*/
-.testimonials {
+.sep1 {
   padding: 80px 0;
-  background: url("../img/side3.jpeg") no-repeat;
+  background: url("../img/cover.jpg") no-repeat;
   background-position: center center;
   background-size: cover;
   position: relative;
-  height: 200px;
+  height: 400px;
 }
 
-.testimonials::before {
+.sep1::before {
   content: "";
   position: absolute;
   left: 0;
@@ -829,7 +860,7 @@ section {
   background: rgba(14, 16, 17, 0.7);
 }
 
-#testimonials .testimonials-container {
+#sep1 .sep1-container {
   position: absolute;
   bottom: 0;
   top: 0;
@@ -842,28 +873,152 @@ section {
   padding: 0 15px;
 }
 
-.testimonials .testimonials-container h2 {
+.sep1 .sep1-container h2 {
   color: #eee;
   margin-bottom: 30px;
-  font-size: 18px;
+  font-size: 26px;
   font-weight: 500;
   letter-spacing: 1px;
 }
 
 @media (min-width: 1024px) {
-  .testimonials {
+  .sep1 {
     background-attachment: fixed;
   }
 }
 
 @media (min-width: 992px) {
-  .testimonials .testimonial-item p {
+  .sep1 .testimonial-item p {
     width: 80%;
   }
 }
 
 @media (max-width: 575px) {
-  .testimonials h2 {
+  .sep1 h2 {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+}
+
+/*--------------------------------------------------------------
+# Say Thank you
+--------------------------------------------------------------*/
+.sep2 {
+  padding: 80px 0;
+  background: url("../img/resume.jpeg") no-repeat;
+  background-position: center center;
+  background-size: cover;
+  position: relative;
+  height: 400px;
+}
+
+.sep2::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background: rgba(14, 16, 17, 0.4);
+}
+
+#sep2 .sep2-container {
+  position: absolute;
+  bottom: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 0 15px;
+}
+
+.sep2 .sep2-container h2 {
+  color: #eee;
+  margin-bottom: 30px;
+  font-size: 26px;
+  font-weight: 500;
+  letter-spacing: 1px;
+}
+
+@media (min-width: 1024px) {
+  .sep2 {
+    background-attachment: fixed;
+  }
+}
+
+@media (min-width: 992px) {
+  .sep2 .testimonial-item p {
+    width: 80%;
+  }
+}
+
+@media (max-width: 575px) {
+  .sep2 h2 {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+}
+
+/*--------------------------------------------------------------
+# Say Thank you
+--------------------------------------------------------------*/
+.sep3 {
+  padding: 80px 0;
+  background: url("../img/side3.jpeg") no-repeat;
+  background-position: center center;
+  background-size: cover;
+  position: relative;
+  height: 400px;
+}
+
+.sep3::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background: rgba(14, 16, 17, 0.5);
+}
+
+#sep3 .sep3-container {
+  position: absolute;
+  bottom: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 0 15px;
+}
+
+.sep3 .sep3-container h2 {
+  color: #eee;
+  margin-bottom: 30px;
+  font-size: 26px;
+  font-weight: 500;
+  letter-spacing: 1px;
+}
+
+@media (min-width: 1024px) {
+  .sep3 {
+    background-attachment: fixed;
+  }
+}
+
+@media (min-width: 992px) {
+  .sep3 .testimonial-item p {
+    width: 80%;
+  }
+}
+
+@media (max-width: 575px) {
+  .sep3 h2 {
     text-align: center;
     margin-bottom: 30px;
   }
@@ -923,88 +1078,6 @@ section {
   color: #fff;
   border-color: #ffb727;
   background: #ffb727;
-}
-
-.contact .php-email-form {
-  box-shadow: 0 0 30px rgba(214, 215, 216, 0.6);
-  padding: 27px;
-}
-
-.contact .php-email-form .validate {
-  display: none;
-  color: red;
-  margin: 0 0 15px 0;
-  font-weight: 400;
-  font-size: 13px;
-}
-
-.contact .php-email-form .error-message {
-  display: none;
-  color: #fff;
-  background: #ed3c0d;
-  text-align: center;
-  padding: 15px;
-  font-weight: 600;
-}
-
-.contact .php-email-form .sent-message {
-  display: none;
-  color: #fff;
-  background: #18d26e;
-  text-align: center;
-  padding: 15px;
-  font-weight: 600;
-}
-
-.contact .php-email-form .loading {
-  display: none;
-  background: #fff;
-  text-align: center;
-  padding: 15px;
-}
-
-.contact .php-email-form .loading:before {
-  content: "";
-  display: inline-block;
-  border-radius: 50%;
-  width: 24px;
-  height: 24px;
-  margin: 0 10px -6px 0;
-  border: 3px solid #18d26e;
-  border-top-color: #eee;
-  -webkit-animation: animate-loading 1s linear infinite;
-  animation: animate-loading 1s linear infinite;
-}
-
-.contact .php-email-form input, .contact .php-email-form textarea {
-  border-radius: 0;
-  box-shadow: none;
-  font-size: 14px;
-}
-
-.contact .php-email-form input::focus, .contact .php-email-form textarea::focus {
-  background-color: #ffb727;
-}
-
-.contact .php-email-form input {
-  padding: 20px 15px;
-}
-
-.contact .php-email-form textarea {
-  padding: 12px 15px;
-}
-
-.contact .php-email-form button[type="submit"] {
-  background: #ffb727;
-  border: 0;
-  padding: 10px 24px;
-  color: #fff;
-  transition: 0.4s;
-  border-radius: 5px;
-}
-
-.contact .php-email-form button[type="submit"]:hover {
-  background: #ffc85a;
 }
 
 @-webkit-keyframes animate-loading {
